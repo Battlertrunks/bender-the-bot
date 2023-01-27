@@ -60,6 +60,7 @@ async def hist(ctx):
     # Checks if it is a new day, if so resets the historyListNumber to 0
     if cur[:3] != time.localtime()[:3]:
         historyListNumber = 0
+        cur = time.localtime()
 
     # If there is no more history events 
     if len(data['events']) < historyListNumber:
